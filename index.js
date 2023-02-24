@@ -12,7 +12,7 @@ const render = require("./src/page-template.js");
 
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
-// Add the starter code provided by the instructor (Dan Mueller)
+// Add the starter code provided by the class instructor (Dan Mueller)
 inquirer.prompt([{
     //manager questions
 }]).then(response => {
