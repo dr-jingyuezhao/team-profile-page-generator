@@ -1,0 +1,32 @@
+{
+  "name": "team-profile-page-generator",
+  "version": "1.0.0",
+  "description": "A NodeJS command-line application that generates an HTML webpage for a team of engineers and interns",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dr-jingyuezhao/team-profile-page-generator.git"
+  },
+  "keywords": [
+    "engineering",
+    "team"
+  ],
+  "author": "Jingyue Zhao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dr-jingyuezhao/team-profile-page-generator/issues"
+  },
+  "homepage": "https://github.com/dr-jingyuezhao/team-profile-page-generator#readme",
+  "devDependencies": {
+    "jest": "^29.4.3"
+  },
+  "dependencies": {
+    "inquirer": "^6.5.0"
+  }
+}
