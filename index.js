@@ -12,7 +12,7 @@ const render = require("./src/page-template.js");
 
 // Use Inquirer to gather information about the development team members and create objects for each team member
 // When a user starts the application, they're prompted to enter the team manager's: Name, Employee ID, Email address, Office number
-const userQuestions = [
+const initQuestions = [
     {
         type: 'input',
         message: 'What is the name of your manager?',
@@ -25,7 +25,7 @@ const userQuestions = [
     },
     {
         type: 'input',
-        message: 'What is the Email address of your manager?',
+        message: 'What is the email address of your manager?',
         name: 'managerEmail',
     },
     {
@@ -49,7 +49,44 @@ const menuOptions = [
     },
 ];
 
-// When a user selects the engineer option, the user is prompted to enter the following and then taken back to the menu
+// When a user selects the engineer or intern option, the user is prompted to enter the following: Name, ID, Email
+const userQuestions = [
+    {
+        type: 'input',
+        message: 'What is your name?',
+        name: 'userName',
+    },
+    {
+        type: 'input',
+        message: 'What is your employee ID?',
+        name: 'userID',
+    },
+    {
+        type: 'input',
+        message: 'What is your email address?',
+        name: 'userEmail',
+    },
+];
+
+// Engineer's GitHub username
+const engineerQ = [
+    {
+        type: 'input',
+        message: 'What is your GitHub username?',
+        name: 'engGithub',
+    },
+];
+
+// Intern’s school
+const internQ = [
+    {
+        type: 'input',
+        message: 'What is the name of your school?',
+        name: 'internSchool',
+    },
+];
+
+// and then taken back to the menu
 
 inquirer.prompt([{
     //manager questions
