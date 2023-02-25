@@ -23,6 +23,8 @@ The following image shows the web application's appearance and functionality:
 
 Resources:
 * https://stackoverflow.com/questions/5266152/how-to-exit-in-node-js
+* https://blog.logrocket.com/using-writefilesync-node-js/
+
 
 ## License
 

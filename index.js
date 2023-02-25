@@ -106,8 +106,6 @@ function promptForManager() {
         // populate manager info
         let manager = new Manager(response.name, response.id, response.email, response.office);
         teamMembers.push(manager);
-        // print out the team in the console
-        console.log(teamMembers);
         promptForNextEmployee();
     })
 }
@@ -137,8 +135,6 @@ function promptForEngineer() {
         let engineer = new Engineer(response.name, response.id, response.email, response.github);
         // add new engineer to team array
         teamMembers.push(engineer);
-        // print out the team in the console
-        console.log(teamMembers);
         promptForNextEmployee();
     })
 }
@@ -150,8 +146,6 @@ function promptForIntern() {
         let intern = new Intern(response.name, response.id, response.email, response.school);
         // add new intern to team array
         teamMembers.push(intern);
-        // print out the team in the console
-        console.log(teamMembers);
         promptForNextEmployee();
     })
 }
