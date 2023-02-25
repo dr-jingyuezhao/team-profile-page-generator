@@ -88,17 +88,13 @@ const internQ = [
 
 // and then taken back to the menu
 
-inquirer.prompt([{
-    //manager questions
-}]).then(response => {
+inquirer.prompt(initQuestions).then(response => {
     // populate manager info
     // promptForNextEmployee ()
 })
 
 const promptForNextEmployee = () => {
-    inquirer.prompt([{
-        // choice of 3
-    }]).then(response => {
+    inquirer.prompt(menuOptions).then(response => {
         // if engineer
         //    promptForEngineer
         // else if intern
