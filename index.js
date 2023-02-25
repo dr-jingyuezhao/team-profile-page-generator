@@ -158,3 +158,5 @@ function generateHTML(fileName, data) {
     // To exit the application
     process.exit(0);
 }
+// Call the function to prompt the manager user for input
+promptForManager();
