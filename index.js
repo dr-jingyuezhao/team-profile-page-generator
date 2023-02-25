@@ -125,7 +125,7 @@ function promptForNextEmployee() {
         }
         else {
             // use the provided variable outputPath and call the render function with the team array containing all employee objects
-            generateHTML(outputPath, render(teamMembers));
+            generateHTML();
         }
     })
 }
@@ -157,10 +157,9 @@ function promptForIntern() {
 }
 
 // Function to generate a webpage/HTML file named team.html in the output folder
-function generateHTML(fileName, data) {
-    fs.writeFile(fileName, data, (err) =>
-        err ? console.error(err) : console.log('You have successfully generated a webpage named team.html in the output folder!')
-    );
+function generateHTML() {
+    fs.writeFileSync(outputPath, render(teamMembers));
+    console.log("You have successfully generated a webpage named team.html in the output folder!");
     // To exit the application
     process.exit(0);
 }
