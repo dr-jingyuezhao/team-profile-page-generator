@@ -10,7 +10,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/page-template.js");
 
-let team = [];
+let teamMembers = [];
 
 // Use Inquirer to gather information about the development team members and create objects for each team member
 // When a user starts the application, they're prompted to enter the team manager's: Name, Employee ID, Email address, Office number
@@ -105,9 +105,9 @@ function promptForManager() {
     inquirer.prompt(managerQuestions).then(response => {
         // populate manager info
         let manager = new Manager(response.name, response.id, response.email, response.office);
-        team.push(manager);
+        teamMembers.push(manager);
         // print out the team in the console
-        console.log(team);
+        console.log(teamMembers);
         promptForNextEmployee();
     })
 }
@@ -125,7 +125,7 @@ function promptForNextEmployee() {
         }
         else {
             // use the provided variable outputPath and call the render function with the team array containing all employee objects
-            generateHTML(outputPath, render(team));
+            generateHTML(outputPath, render(teamMembers));
         }
     })
 }
@@ -136,9 +136,9 @@ function promptForEngineer() {
         // populate engineer info
         let engineer = new Engineer(response.name, response.id, response.email, response.github);
         // add new engineer to team array
-        team.push(engineer);
+        teamMembers.push(engineer);
         // print out the team in the console
-        console.log(team);
+        console.log(teamMembers);
         promptForNextEmployee();
     })
 }
@@ -149,9 +149,9 @@ function promptForIntern() {
         // populate intern info
         let intern = new Intern(response.name, response.id, response.email, response.school);
         // add new intern to team array
-        team.push(intern);
+        teamMembers.push(intern);
         // print out the team in the console
-        console.log(team);
+        console.log(teamMembers);
         promptForNextEmployee();
     })
 }
