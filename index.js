@@ -19,21 +19,45 @@ const managerQuestions = [
         type: "input",
         message: "What is the team manager's name?",
         name: "name",
+        validate: (value) => {
+            if (!value) {
+                return "No input. Please enter a name."
+            }
+            return true
+        },
     },
     {
         type: "input",
         message: "What is the team manager's employee ID?",
         name: "id",
+        validate: (value) => {
+            if (!value) {
+                return "No input. Please enter an ID."
+            }
+            return true
+        },
     },
     {
         type: "input",
         message: "What is the team manager's email address?",
         name: "email",
+        validate: (value) => {
+            if (!value) {
+                return "No input. Please enter an email address."
+            }
+            return true
+        },
     },
     {
-        type: "input",
+        type: "number",
         message: "What is the team manager's office number?",
         name: "office",
+        validate: (value) => {
+            if (!value) {
+                return "No numeric input. Please enter an office number."
+            }
+            return true
+        },
     },
 ];
 
@@ -57,21 +81,45 @@ const engineerQuestions = [
         type: "input",
         message: "What is the engineer's name?",
         name: "name",
+        validate: (value) => {
+            if (!value) {
+                return "No input. Please enter a name."
+            }
+            return true
+        },
     },
     {
         type: "input",
         message: "What is the engineer's employee ID?",
         name: "id",
+        validate: (value) => {
+            if (!value) {
+                return "No input. Please enter an ID."
+            }
+            return true
+        },
     },
     {
         type: "input",
         message: "What is the engineer's email address?",
         name: "email",
+        validate: (value) => {
+            if (!value) {
+                return "No input. Please enter an email address."
+            }
+            return true
+        },
     },
     {
         type: "input",
         message: "What is the engineer's GitHub username?",
         name: "github",
+        validate: (value) => {
+            if (!value) {
+                return "No input. Please enter a GitHub username."
+            }
+            return true
+        },
     },
 ];
 
@@ -81,21 +129,45 @@ const internQuestions = [
         type: "input",
         message: "What is the intern's name?",
         name: "name",
+        validate: (value) => {
+            if (!value) {
+                return "No input. Please enter a name."
+            }
+            return true
+        },
     },
     {
         type: "input",
         message: "What is the intern's employee ID?",
         name: "id",
+        validate: (value) => {
+            if (!value) {
+                return "No input. Please enter an ID."
+            }
+            return true
+        },
     },
     {
         type: "input",
         message: "What is the intern's email address?",
         name: "email",
+        validate: (value) => {
+            if (!value) {
+                return "No input. Please enter an email address."
+            }
+            return true
+        },
     },
     {
         type: "input",
         message: "What is the intern's school?",
         name: "school",
+        validate: (value) => {
+            if (!value) {
+                return "No input. Please enter a school name."
+            }
+            return true
+        },
     },
 ];
 
