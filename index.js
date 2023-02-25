@@ -106,6 +106,8 @@ function promptForManager() {
         // populate manager info
         let manager = new Manager(response.name, response.id, response.email, response.office);
         team.push(manager);
+        // print out the team in the console
+        console.log(team);
         promptForNextEmployee();
     })
 }
@@ -135,6 +137,8 @@ function promptForEngineer() {
         let engineer = new Engineer(response.name, response.id, response.email, response.github);
         // add new engineer to team array
         team.push(engineer);
+        // print out the team in the console
+        console.log(team);
         promptForNextEmployee();
     })
 }
@@ -146,6 +150,8 @@ function promptForIntern() {
         let intern = new Intern(response.name, response.id, response.email, response.school);
         // add new intern to team array
         team.push(intern);
+        // print out the team in the console
+        console.log(team);
         promptForNextEmployee();
     })
 }
@@ -158,5 +164,8 @@ function generateHTML(fileName, data) {
     // To exit the application
     process.exit(0);
 }
+
 // Call the function to prompt the manager user for input
 promptForManager();
+
+
