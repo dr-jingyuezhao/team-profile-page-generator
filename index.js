@@ -58,12 +58,12 @@ const managerQuestions = [
     },
     {
         type: "number",
-        message: "What is the team manager's office number (3 digits)?",
+        message: "What is the team manager's office number (e.g., 4 digits)?",
         name: "office",
         // Add a validate field to the question object, defined as a function (used the modified code from https://pakstech.com/blog/inquirer-js/)
         validate: (value) => {
             if (!value) {
-                return "No numeric input. Please enter an office number."
+                return "No numeric input. Please enter a number."
             }
             return true
         },
@@ -242,6 +242,11 @@ function promptForIntern() {
 
 // Function to generate a webpage/HTML file named team.html in the output folder
 function generateHTML() {
+    // Add code to check if the output folder exists and create it if it does not (used the code from https://stackoverflow.com/questions/31645738/how-to-create-full-path-with-nodes-fs-mkdirsync)
+    if (!fs.existsSync(OUTPUT_DIR)) {
+        fs.mkdirSync(OUTPUT_DIR);
+    }
+    // Add code to write the team.html file in the output folder (used the code from https://blog.logrocket.com/using-writefilesync-node-js/)
     fs.writeFileSync(outputPath, render(teamMembers));
     console.log("You have successfully generated a webpage named team.html in the output folder!");
     // To exit the application (used the code from https://stackoverflow.com/questions/5266152/how-to-exit-in-node-js)

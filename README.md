@@ -25,6 +25,8 @@ Resources:
 * https://stackoverflow.com/questions/5266152/how-to-exit-in-node-js
 * https://blog.logrocket.com/using-writefilesync-node-js/
 * https://pakstech.com/blog/inquirer-js/
+* https://nodejs.org/docs/latest-v16.x/api/fs.html#fsexistssyncpath
+* https://stackoverflow.com/questions/31645738/how-to-create-full-path-with-nodes-fs-mkdirsync
 
 
 ## License
