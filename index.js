@@ -19,6 +19,7 @@ const managerQuestions = [
         type: "input",
         message: "What is the team manager's name?",
         name: "name",
+        // Add a validate field to the question object, defined as a function (used the modified code from https://pakstech.com/blog/inquirer-js/)
         validate: (value) => {
             if (!value) {
                 return "No input. Please enter a name."
@@ -30,6 +31,7 @@ const managerQuestions = [
         type: "input",
         message: "What is the team manager's employee ID?",
         name: "id",
+        // Add a validate field to the question object, defined as a function (used the modified code from https://pakstech.com/blog/inquirer-js/)
         validate: (value) => {
             if (!value) {
                 return "No input. Please enter an ID."
@@ -41,6 +43,7 @@ const managerQuestions = [
         type: "input",
         message: "What is the team manager's email address?",
         name: "email",
+        // Add a validate field to the question object, defined as a function (used the modified code from https://pakstech.com/blog/inquirer-js/)
         validate: (value) => {
             if (!value) {
                 return "No input. Please enter an email address."
@@ -50,8 +53,9 @@ const managerQuestions = [
     },
     {
         type: "number",
-        message: "What is the team manager's office number?",
+        message: "What is the team manager's office number (3 digits)?",
         name: "office",
+        // Add a validate field to the question object, defined as a function (used the modified code from https://pakstech.com/blog/inquirer-js/)
         validate: (value) => {
             if (!value) {
                 return "No numeric input. Please enter an office number."
@@ -65,12 +69,12 @@ const managerQuestions = [
 const menuOptions = [
     {
         type: "list",
-        message: "What would you like to do?",
+        message: "Which type of team member would you like to add?",
         name: "option",
         choices: [
-            "Add an engineer",
-            "Add an intern",
-            "Finish building the team",
+            "An engineer",
+            "An intern",
+            "I don't want to add more team members",
         ],
     },
 ];
@@ -81,6 +85,7 @@ const engineerQuestions = [
         type: "input",
         message: "What is the engineer's name?",
         name: "name",
+        // Add a validate field to the question object, defined as a function (used the modified code from https://pakstech.com/blog/inquirer-js/)
         validate: (value) => {
             if (!value) {
                 return "No input. Please enter a name."
@@ -92,6 +97,7 @@ const engineerQuestions = [
         type: "input",
         message: "What is the engineer's employee ID?",
         name: "id",
+        // Add a validate field to the question object, defined as a function (used the modified code from https://pakstech.com/blog/inquirer-js/)
         validate: (value) => {
             if (!value) {
                 return "No input. Please enter an ID."
@@ -103,6 +109,7 @@ const engineerQuestions = [
         type: "input",
         message: "What is the engineer's email address?",
         name: "email",
+        // Add a validate field to the question object, defined as a function (used the modified code from https://pakstech.com/blog/inquirer-js/)
         validate: (value) => {
             if (!value) {
                 return "No input. Please enter an email address."
@@ -114,6 +121,7 @@ const engineerQuestions = [
         type: "input",
         message: "What is the engineer's GitHub username?",
         name: "github",
+        // Add a validate field to the question object, defined as a function (used the modified code from https://pakstech.com/blog/inquirer-js/)
         validate: (value) => {
             if (!value) {
                 return "No input. Please enter a GitHub username."
@@ -129,6 +137,7 @@ const internQuestions = [
         type: "input",
         message: "What is the intern's name?",
         name: "name",
+        // Add a validate field to the question object, defined as a function (used the modified code from https://pakstech.com/blog/inquirer-js/)
         validate: (value) => {
             if (!value) {
                 return "No input. Please enter a name."
@@ -140,6 +149,7 @@ const internQuestions = [
         type: "input",
         message: "What is the intern's employee ID?",
         name: "id",
+        // Add a validate field to the question object, defined as a function (used the modified code from https://pakstech.com/blog/inquirer-js/)
         validate: (value) => {
             if (!value) {
                 return "No input. Please enter an ID."
@@ -151,6 +161,7 @@ const internQuestions = [
         type: "input",
         message: "What is the intern's email address?",
         name: "email",
+        // Add a validate field to the question object, defined as a function (used the modified code from https://pakstech.com/blog/inquirer-js/)
         validate: (value) => {
             if (!value) {
                 return "No input. Please enter an email address."
@@ -162,6 +173,7 @@ const internQuestions = [
         type: "input",
         message: "What is the intern's school?",
         name: "school",
+        // Add a validate field to the question object, defined as a function (used the modified code from https://pakstech.com/blog/inquirer-js/)
         validate: (value) => {
             if (!value) {
                 return "No input. Please enter a school name."
@@ -173,6 +185,7 @@ const internQuestions = [
 
 // Function to initialize the application with questions for the manager user
 function promptForManager() {
+    console.log("Please start building your software engineering team.");
     // Prompt for the manager
     inquirer.prompt(managerQuestions).then(response => {
         // populate manager info
@@ -226,7 +239,7 @@ function promptForIntern() {
 function generateHTML() {
     fs.writeFileSync(outputPath, render(teamMembers));
     console.log("You have successfully generated a webpage named team.html in the output folder!");
-    // To exit the application
+    // To exit the application (used the code from https://stackoverflow.com/questions/5266152/how-to-exit-in-node-js)
     process.exit(0);
 }
 
