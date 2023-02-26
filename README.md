@@ -21,9 +21,12 @@ This is a Node.js command-line application that takes in information about emplo
 The steps required to install the application:
 To install necessary dependencies, run the following command: `npm install`
 
+The application can be accessed on GitHub following [the link to GitHub repository](https://github.com/dr-jingyuezhao/team-profile-page-generator).
+
+
 ## Usage
 
-You can use this applicaiton by running `node index.js`.
+You can use this applicaiton by running: `node index.js`.
 
 A manager of a software engineering team can generate a webpage that displays the team's basic information containing email addresses, engineer's GitHub profile, and intern's school, etc.
 
@@ -109,8 +112,11 @@ Create a personal fork of the project on Github and make a clean pull request.
 
 
 ## Tests
-The application can be accessed and tested following [the link to GitHub repository](https://github.com/dr-jingyuezhao/team-profile-page-generator).
+The application is created using test-driven development and can be tested by running: `npm run test`. 
 
+The tests for all the employee classes are provided for each team member type, which are located in the _tests_ directory and can be accessed on GitHub following [the link to the _tests_ directory in GitHub repository](https://github.com/dr-jingyuezhao/team-profile-page-generator/tree/main/__tests__). 
+
+The application has successfully passed each provided test.
 
 ## Questions
 If you have any questions about this project, please open an issue or contact me directly at jzhao@outlook.com. 
