@@ -12,7 +12,6 @@ const render = require("./src/page-template.js");
 
 let teamMembers = [];
 
-// Use Inquirer to gather information about the development team members and create objects for each team member
 // When a user starts the application, they're prompted to enter the team manager's: Name, Employee ID, Email address, Office number
 const managerQuestions = [
     {
@@ -58,7 +57,7 @@ const managerQuestions = [
     },
     {
         type: "number",
-        message: "What is the team manager's office number (e.g., 4 digits)?",
+        message: "What is the team manager's office number (e.g., 3 digits)?",
         name: "office",
         // Add a validate field to the question object, defined as a function (used the modified code from https://pakstech.com/blog/inquirer-js/)
         validate: (value) => {
@@ -188,6 +187,7 @@ const internQuestions = [
     },
 ];
 
+// Use Inquirer to gather information about the development team members and create objects for each team member
 // Function to initialize the application with questions for the manager user
 function promptForManager() {
     console.log("Please start building your software engineering team.");
@@ -195,6 +195,7 @@ function promptForManager() {
     inquirer.prompt(managerQuestions).then(response => {
         // populate manager info
         let manager = new Manager(response.name, response.id, response.email, response.office);
+        // add the manager to teamMembers array
         teamMembers.push(manager);
         promptForNextEmployee();
     })
@@ -223,7 +224,7 @@ function promptForEngineer() {
     inquirer.prompt(engineerQuestions).then(response => {
         // populate engineer info
         let engineer = new Engineer(response.name, response.id, response.email, response.github);
-        // add new engineer to team array
+        // add new engineer to teamMembers array
         teamMembers.push(engineer);
         promptForNextEmployee();
     })
@@ -234,7 +235,7 @@ function promptForIntern() {
     inquirer.prompt(internQuestions).then(response => {
         // populate intern info
         let intern = new Intern(response.name, response.id, response.email, response.school);
-        // add new intern to team array
+        // add new intern to teamMembers array
         teamMembers.push(intern);
         promptForNextEmployee();
     })
