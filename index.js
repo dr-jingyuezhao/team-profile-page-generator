@@ -16,6 +16,11 @@ let teamMembers = [];
 // When a user starts the application, they're prompted to enter the team manager's: Name, Employee ID, Email address, Office number
 const managerQuestions = [
     {
+        type: "confirm",
+        message: "Are you the team manager?",
+        name: "confirmation",
+    },
+    {
         type: "input",
         message: "What is the team manager's name?",
         name: "name",
@@ -198,11 +203,11 @@ function promptForManager() {
 // Function to prompt for adding a new employee
 function promptForNextEmployee() {
     inquirer.prompt(menuOptions).then(response => {
-        if (response.option === "Add an engineer") {
+        if (response.option === "An engineer") {
             // promptForEngineer
             promptForEngineer();
         }
-        else if (response.option === "Add an intern") {
+        else if (response.option === "An intern") {
             // promptForIntern
             promptForIntern();
         }
